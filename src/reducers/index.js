@@ -3,58 +3,67 @@ import { START_SMURF_FETCH,
     SUCCESSFUL_SMURF_FETCH, 
     FAILED_SMURF_FETCH, 
     ADD_SMURF,
-    ERROR_SMURF
+    ERROR_SMURF,
 } from '../actions/index';
 
 export const initialState = {
-    smurf: [
+    smurfs: [
         {
-            id:'',
-            name:'',
-            position:'',
-            nickname:'',
-            description:''
+            id:'123',
+            name:'Murphy Smurf',
+            position:'Doggo smurf',
+            nickname:'Freddie Murphery',
+            description:'A dog smurf that protects the smurf village and loves peanut butter'
+        },
+        {
+            id:'456',
+            name:'Elliott Smurf',
+            position:'Mortgage Loan Officer Smurf',
+            nickname:'Smelliott',
+            description:'Mortgage Loan Officer Smurf that loves playing fetch with Murphy smurf and watching pro wrestling'
         }
     ],
     loading: false,
     error:''
-}
+};
+// END OF INITIAL STATE
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case START_SMURF_FETCH:
             return {
                 ...state,
-                smurf: {},
+                smurfs: {},
                 loading: true,
                 error: ''
             }
         case SUCCESSFUL_SMURF_FETCH:
             return {
                 ...state,
-                smurf: action.payload,
+                smurfs: action.payload,
                 loading:false,
                 error:''
             }
         case FAILED_SMURF_FETCH:
             return {
                 ...state,
-                smurf: {},
+                smurfs: {},
                 loading: false,
                 error: action.payload
             }
         case ADD_SMURF:
+            const newSmurf = {
+                name: action.payload,
+            }
             return {
-                const newSmurf = {
-                    ...action.payload,
-                    id: state.smurf.id
-                }
+                ...state,
+                smurfs: [...state.smurfs, newSmurf]
             }
         case ERROR_SMURF:
             return {
                 ...state,
                 // how to do the error
-                smurf: {},
+                smurfs: {},
                 loading:false,
                 error: 'SMURF ERROR BIG SMURFIN ERROR'
             }
