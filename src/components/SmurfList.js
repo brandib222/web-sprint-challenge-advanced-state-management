@@ -3,9 +3,14 @@ import Smurf from './Smurf';
 
 import { connect } from 'react-redux';
 
+import { initialState } from '../reducers';
+
 import { fetchSmurfs, successfulSmurfFetch, failedSmurfFetch, addSmurf, errorSmurf } from '../actions';
 
- const SmurfList = () => {
+ const SmurfList = (props) => {
+    
+    console.log(initialState);
+    
     const isLoading = false;
     const testSmurf = {
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
