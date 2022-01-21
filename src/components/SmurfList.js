@@ -26,6 +26,8 @@ import { fetchSmurfs } from '../actions';
     </div>);
 }
 
+
+
 const mapStateToProps = (state) => {
     return ({
         smurfs: state.smurfs
