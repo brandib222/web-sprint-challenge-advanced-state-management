@@ -18,9 +18,9 @@ export const initialState = {
         {
             id:'456',
             name:'Elliott Smurf',
-            position:'Mortgage Loan Officer Smurf',
+            position:'Boyfriend Smurf',
             nickname:'Smelliott',
-            description:'Mortgage Loan Officer Smurf that loves playing fetch with Murphy smurf and watching pro wrestling'
+            description:'Boyfriend Smurf that loves playing fetch with Murphy smurf and watching pro wrestling'
         }
     ],
     loading: false,
