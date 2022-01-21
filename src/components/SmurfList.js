@@ -9,7 +9,8 @@ import { fetchSmurfs } from '../actions';
         
     const isLoading = false;
   
-    /*useEffect(() => {
+
+    /* useEffect(() => {
         dispatchEvent(fetchSmurfs());
     }, []); */
 
@@ -25,8 +26,6 @@ import { fetchSmurfs } from '../actions';
     }
     </div>);
 }
-
-
 
 const mapStateToProps = (state) => {
     return ({

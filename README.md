@@ -80,9 +80,9 @@ In this project, you will build the reducer, actions and basic redux connects to
 ### Complete components/SmurfList.js
   Connect this component to your smurfs and loading screen state slices.
   
-  * [ ] Connect the smurfs and loading state values to the SmurfList component.
-  * [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
-  * [ ] Replace the static isLoading variable with the state loading variable.
+  * [x ] Connect the smurfs and loading state values to the SmurfList component.
+  * [x ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+  * [x ] Replace the static isLoading variable with the state loading variable.
 
 ### Complete components/AddForm.js
   Connect this component to the error state slice, setError and addSmurf actions. Complete the form handling code.
@@ -102,9 +102,9 @@ In this project, you will build the reducer, actions and basic redux connects to
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [x ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [x ] Check Codegrade before the deadline to compare its results against your local tests.
+* [x ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 * [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
@@ -113,8 +113,20 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What problem does the context API help solve?
 
+  Context api helps reduce prop drilling and the errors that are likely to occur when you have to pass down props.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions: These are the only source of information for the store. They carry payload information from the app to the store. It is an event that describes something that has happened in the app and require a 'type' field.
+
+Reducers: These are functions that take the current state and action as arguments and return a new state result.
+
+Store: The store holds the whole state tree of your application. It is known as the single source of truth because data can only be changed by dispatching an action to it. 
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
+Thunk is a middleware that allows you to use action creators that return a function instead of an action object. 
+
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+I feel like I have way more to learn in terms of Redux, but it seems the most useful in that it gives you tons of control over what your app is doing and when. 
